@@ -1,0 +1,16 @@
+-- Predictions grow fastest
+CREATE INDEX idx_predictions_model_version_created
+ON predictions (model_version_id, created_at DESC);
+
+CREATE INDEX idx_predictions_user_created
+ON predictions (user_id, created_at DESC);
+
+CREATE INDEX idx_predictions_comparison
+ON predictions (comparison_id);
+
+CREATE INDEX idx_predictions_input_hash
+ON predictions (input_hash);
+
+-- Comparisons
+CREATE INDEX idx_comparisons_user_created
+ON comparisons (user_id, created_at DESC);
