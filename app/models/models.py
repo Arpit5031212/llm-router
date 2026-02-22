@@ -30,7 +30,7 @@ class ModelVersion(Base):
     model_id: Mapped[int] = mapped_column(ForeignKey('models.id'), nullable=False)
     version: Mapped[str] = mapped_column(String(64))
     config_json: Mapped[JSONB] = mapped_column(JSONB)
-    is_acive: Mapped[bool] = mapped_column(default=True)
+    is_active: Mapped[bool] = mapped_column(default=True)
     created_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     deleted_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), nullable=True)
 

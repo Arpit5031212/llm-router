@@ -5,7 +5,7 @@ from typing import Any, Dict
 import uuid
 from app.models.models import Prediction
 from app.repositories.prediction_repo import PredictionRepository
-from app.adapters.base import ModelAdapterFactory
+from app.adapters.factory import ModelAdapterFactory
 from sqlalchemy.orm import Session
 
 class PredictionService:
